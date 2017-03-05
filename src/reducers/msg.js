@@ -11,11 +11,6 @@ const msg = (state = initState, action) =>{
         case 'MSG_DELETE':
             return state.filter(item=>item.id != action.id)
         case 'MSG_MODIFY':
-            console.log(state.map(item=>{
-                if(item.id == action.msg.id){
-                    return {...item,...action.msg}
-                }
-            }))
             return state.map(item=>{
                 if(item.id == action.msg.id){
                     return {...item,...action.msg}

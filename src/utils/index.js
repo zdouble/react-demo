@@ -31,7 +31,6 @@ const timeFormt = (time) => {
 }
 
 const findMsg = (arr,id) => {
-    console.log(arr)
     var obj = {}
     arr.map((data,index)=>{
         if(data.id == id){
