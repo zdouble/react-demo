@@ -6,7 +6,7 @@ class List extends Component {
         let user = this.props.user
         let listItems = this.props.data.map(data => {
                 return (
-                    <li className="list-group-item">
+                    <li className="list-group-item" key={data.id}>
                         <Link to={`/msg/detail/${data.id}`}>
                             <b>{data.title}</b>
                         </Link>

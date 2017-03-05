@@ -14,7 +14,7 @@ const msg_add = (msg) => {
 const msg_delete = (id) => {
     return {
         type:MSG_DELETE,
-        id
+        id:id
     }
 }
 
@@ -47,9 +47,11 @@ const delect_msg = (id) => {
 const modify_msg = (msg) => {
     return dispatch => {
         let data = storage.get('msg')
-        data = data.map(data=>{
+        data = data.map(data => {
             if(data.id == msg.id){
                 return {...data,...msg}
+            }else {
+                return data
             }
         })
         storage.set('msg',data)
