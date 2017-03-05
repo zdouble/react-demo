@@ -14,14 +14,14 @@ const todo_add = (todo) => {
 const todo_delete = (id) => {
     return {
         type: TODO_DELETE,
-        id
+        id:id
     }
 }
 
 const todo_toggle = (id) => {
     return {
         type: TODO_TOGGLE,
-        id
+        id:id
     }
 }
 

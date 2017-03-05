@@ -13,6 +13,8 @@ const todo = (state = [], action) => {
                         ...item,
                         completed: !item.completed
                     }
+                }else {
+                    return item
                 }
             })
         default:
